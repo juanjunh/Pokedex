@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0CF4731FC818A2001E21DD /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0CF4721FC818A2001E21DD /* PokeCell.swift */; };
 		DE2E26A81FC2E6550056B6EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E26A71FC2E6550056B6EA /* AppDelegate.swift */; };
 		DE2E26AA1FC2E6550056B6EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E26A91FC2E6550056B6EA /* ViewController.swift */; };
 		DE2E26AD1FC2E6550056B6EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2E26AB1FC2E6550056B6EA /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE0CF4721FC818A2001E21DD /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		DE2E26A41FC2E6550056B6EA /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2E26A71FC2E6550056B6EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE2E26A91FC2E6550056B6EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				DE2E26AB1FC2E6550056B6EA /* Main.storyboard */,
+				DE0CF4721FC818A2001E21DD /* PokeCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0CF4731FC818A2001E21DD /* PokeCell.swift in Sources */,
 				DE2E26AA1FC2E6550056B6EA /* ViewController.swift in Sources */,
 				DE2E26BD1FC2EA470056B6EA /* PokemonData.swift in Sources */,
 				DE2E26A81FC2E6550056B6EA /* AppDelegate.swift in Sources */,
@@ -314,6 +318,7 @@
 				DE2E26B81FC2E6550056B6EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
