@@ -8,10 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    @IBOutlet weak var collection: UICollectionView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collection.dataSource = self
+        collection.delegate = self
+        
         
     }
     
@@ -19,7 +26,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PokeCell", forIndexPath: indexPath) as? PokeCell {
             
+            let pokemon = Pokemon(name: "Pokemon", pokedexID: indexPath.row)
+            cell.configureCell(pokemon)
+            
             return cell
+            
         }else {
             return UICollectionViewCell()
         }
@@ -41,12 +52,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: NSIndexPath)-> CGSize {
-//      return CGSize(width: 105, height: 105)
-//    }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSize(width: 105, height: 105)
+    }
+    
+    }
 
 
 
 
-}
+
 
