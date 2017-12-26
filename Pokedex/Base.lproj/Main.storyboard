@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Pokemon Solid.ttf">
+            <string>PokemonSolidNormal</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -20,9 +25,36 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwP-zI-hfo">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZm-Zy-mkQ">
+                                        <rect key="frame" x="170" y="15" width="260" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="oCu-qk-SmF"/>
+                                            <constraint firstAttribute="width" constant="260" id="xve-67-89H"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="23"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9B-JM-sdg">
+                                        <rect key="frame" x="519" y="13" width="43" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="43" id="2GC-Mo-d2O"/>
+                                            <constraint firstAttribute="height" constant="40" id="EfB-v6-SUb"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="music.png"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ew1-gl-4Vi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="c9B-JM-sdg" firstAttribute="centerY" secondItem="fwP-zI-hfo" secondAttribute="centerY" id="0He-jR-7ac"/>
+                                    <constraint firstItem="dZm-Zy-mkQ" firstAttribute="centerX" secondItem="fwP-zI-hfo" secondAttribute="centerX" id="MPY-IX-x5O"/>
+                                    <constraint firstAttribute="trailing" secondItem="c9B-JM-sdg" secondAttribute="trailing" constant="38" id="WCl-tp-gVY"/>
                                     <constraint firstAttribute="height" constant="65" id="acD-w4-NOx"/>
+                                    <constraint firstAttribute="bottom" secondItem="dZm-Zy-mkQ" secondAttribute="bottom" constant="15" id="vhz-02-ESB"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="FSg-sh-XVU">
@@ -124,5 +156,6 @@
     <resources>
         <image name="4" width="120" height="120"/>
         <image name="bg" width="420" height="420"/>
+        <image name="music.png" width="100" height="100"/>
     </resources>
 </document>
